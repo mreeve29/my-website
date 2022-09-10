@@ -9,6 +9,8 @@ import Experience from "../components/Experience.astro";
 import ExperienceNew from "../components/ExperienceNew.astro";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
+
 import Footer from "../components/Footer.astro";
 
 import Data from "../data/data.json";
@@ -17,33 +19,30 @@ const { about, education, experience, skills } = Data;
 ---
 
 <Layout title="Michael Reeve - Software Engineer">
-    <Header />
-    <Name name="Michael Reeve" />
-    <Section title="About Me" classProp="pt-10">
-        <About about={about} />
-    </Section>
-    <Section title="Experience" classProp="pt-10">
-        <ExperienceNew experiences={experience} />
-    </Section>
+    <main class="w-full sm:max-w-screen-2xl m-auto">
+        <Header />
+        <Name name="Michael Reeve" />
+        <Section title="About Me" classProp="pt-10">
+            <About about={about} />
+            <Contact classProp="mt-10"/>
+        </Section>
+        
+        <Section title="Experience" classProp="pt-10">
+            <ExperienceNew experiences={experience} />
+        </Section>
 
-    <Section title="Education" classProp="pt-10">
-        <Education schools={education} />
-    </Section>
+        <Section title="Education" classProp="pt-5">
+            <Education schools={education} />
+        </Section>
+        <!-- <Section title="Projects" classProp="pt-10">
+            <Projects />
+        </Section> -->
 
-    {
-        /* <Section title="Skills" class="pt-10">
-        <Skills/>
-        </Section> */
-    }
-    {/* <Skills/> */}
-    <Section title="Projects" classProp="pt-10">
-        <Projects />
-    </Section>
-
-    <Section title="Skills" classProp="pt-10">
-        <Skills skills={skills}/>
-    </Section>
-
+        <Section title="Skills" classProp="pt-10">
+            <Skills skills={skills}/>
+            <Contact classProp="mt-5"/>
+        </Section>
+    </main>
     <Footer />
 </Layout>
 
@@ -52,20 +51,7 @@ const { about, education, experience, skills } = Data;
     body {
         padding: 0;
         margin: 0;
-        /* background-color: rgb(20, 44, 54); dark mode*/
-        /* background-color: #3A2E39; */
-        /* background: radial-gradient(at center top, rgb(56, 189, 248), rgb(49, 46, 129)); */
         background-color: rgb(0, 0, 0);
-        /* background-image: radial-gradient(
-                at 84% 0%,
-                hsla(240, 100%, 50%, 1) 0px,
-                transparent 50%
-            ),
-            radial-gradient(
-                at 0% 0%,
-                hsla(229, 96%, 76%, 1) 0px,
-                transparent 50%
-            ); */
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     }
@@ -79,63 +65,3 @@ const { about, education, experience, skills } = Data;
         box-sizing: border-box;
     }
 </style>
-
-<!-- <style>
-    :root {
-        --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-    }
-
-    h1 {
-        margin: 2rem 0;
-    }
-
-    main {
-        margin: auto;
-        padding: 1em;
-        max-width: 60ch;
-    }
-
-    .text-gradient {
-        font-weight: 900;
-        background-image: var(--astro-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 100% 200%;
-        background-position-y: 100%;
-        border-radius: 0.4rem;
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-        0%,
-        100% {
-            background-position-y: 0%;
-        }
-        50% {
-            background-position-y: 80%;
-        }
-    }
-
-    .instructions {
-        line-height: 1.6;
-        margin: 1rem 0;
-        background: #4f39fa;
-        padding: 1rem;
-        border-radius: 0.4rem;
-        color: var(--color-bg);
-    }
-
-    .instructions code {
-        font-size: 0.875em;
-        border: 0.1em solid var(--color-border);
-        border-radius: 4px;
-        padding: 0.15em 0.25em;
-    }
-
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 1rem;
-        padding: 0;
-    }
-</style> -->

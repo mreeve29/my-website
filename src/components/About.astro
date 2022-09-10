@@ -1,24 +1,26 @@
 ---
+import Contact from "../components/Contact.astro";
+
 import { Image } from '@astrojs/image/components';
 
 const {about} = Astro.props;
 ---
 
 
-<div class="flex items-center flex-col sm:flex-row sm:h-auto h-96">
-    <div class="left-col flex-auto order-1 sm:h-auto text-lg font-semibold text-white">
+<div class="flex items-center flex-col sm:flex-row gap-6">
+    <div class="left-col flex-auto order-1 sm:h-auto text-lg sm:text-xl md:text-2xl lg:text-2xl font-semibold text-white">
         <div class="about-p">
             {about}
         </div>
     </div>
     
-    <div class="me-img-holder order-2 rounded-lg shadow-2xl shadow-white/30 border border-black/10">
+    <div class="w-[200px] sm:w-full order-2 rounded-lg shadow-2xl shadow-white/30 border border-black/10">
         <Image src="/assets/me_square.jpg" aspectRatio="1:1" alt="Image of Michael Reeve" width="600" height="600" style="border-radius:8px"></Image>
     </div>
 </div>
 
 <style>
-    img{
+    .me-pic-div{
         width: 200px;
     }
 </style>

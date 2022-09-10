@@ -13,13 +13,13 @@ export interface Job {
 const { experiences } = Astro.props;
 ---
 
-<div class="flex flex-col sm:flex-row sm:h-auto">
+<div class="flex flex-col sm:flex-row">
     <div>
         {
             experiences.map((j: Job) => (
-                <div class="pt-5 text-white sm:w-[800px]">
-                    <div class="text-lg">
-                        <span class="text-xl font-bold">{j.title}</span> at{" "}
+                <div class="pb-5 text-white">
+                    <div class="text-lg md:text-xl lg:text-2xl">
+                        <span class="font-bold">{j.title}</span> at{" "}
                         {j.company}
                     </div>
                     <div class="mb-2">
