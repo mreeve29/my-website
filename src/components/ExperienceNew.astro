@@ -1,0 +1,37 @@
+---
+export interface Job {
+    company: string;
+    shortCompany: string;
+    title: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    icon: string;
+    description: string[];
+}
+
+const { experiences } = Astro.props;
+---
+
+<div class="flex flex-col sm:flex-row sm:h-auto">
+    <div>
+        {
+            experiences.map((j: Job) => (
+                <div class="pt-5 text-white sm:w-[800px]">
+                    <div class="text-lg">
+                        <span class="text-xl font-bold">{j.title}</span> at{" "}
+                        {j.company}
+                    </div>
+                    <div class="mb-2">
+                        {j.startDate} - {j.endDate}
+                    </div>
+                    <ul class="list-disc list-outside pl-4">
+                        {j.description.map((line) => (
+                            <li class="mb-2">{line}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))
+        }
+    </div>
+</div>

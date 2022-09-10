@@ -1,0 +1,9 @@
+---
+const { link, classProp } = Astro.props;
+---
+
+<div class={classProp}>
+    <a href={link}>
+        <slot />
+    </a>
+</div>

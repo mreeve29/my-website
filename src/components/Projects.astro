@@ -1,0 +1,43 @@
+---
+
+export interface Repo {
+    name: string;
+    html_url: string;
+    description: string;
+    language: string;
+}
+
+const colors_response = await fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json");
+const colors = await colors_response.json();
+
+const repo_response = await fetch("https://api.github.com/users/mreeve29/repos?sort=updated");
+const repos = await repo_response.json();
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 text-white">
+{
+    repos.slice(0, 4).map((repo : Repo) => (
+        <a href={repo.html_url}>
+            <div class="bg-gradient-to-r from-sky-400 to-blue-500 p-[2.5px] m-2 rounded hover:bg-gradient-to-tl hover:from-sky-100 hover:to-blue-400 transition-all">
+                <div class="bg-black p-2 rounded">
+                    <div class="flex content-center justify-between">
+                        <div class="text-xl">{repo.name}</div>
+                        <div class="text-lg flex items-center">
+                            <svg height="20" width="20" class="float-left mr-1">
+                                {console.log(colors[repo.language == null ? "Markdown" : repo.language])}
+                                <circle cx="10" cy="10" r="8" fill={
+                                    colors[repo.language == null ? "Markdown" : repo.language].color
+                                } />
+                            </svg>
+                            {repo.language == null ? "Markdown" : repo.language}
+                        </div>
+                    </div>
+                    <div class="text-lg">
+                        {repo.description}
+                    </div>
+                </div>
+            </div>
+        </a>
+    ))
+}
+</div>

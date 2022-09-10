@@ -1,0 +1,39 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface School {
+    school: String;
+    img: String;
+    degree: String;
+    graduationDate: String;
+    courses : String[];
+}
+
+const { schools } = Astro.props;
+---
+
+<div class="text-white">
+    {schools.map((school : School) => (
+        <div class="school flex justify-evenly">
+            <div class="school-img">
+                <Image src={`/assets/${school.img}`} alt={`${school.school}-logo`} width={75} height={75} quality={100}></Image>
+            </div>
+            <div>
+                <div class="text-xl sm:text-4xl font-bold">{school.school}</div>
+                <div class="text-sm sm:text-xl font-bold">{school.degree}</div>
+                <div class="text-sm sm:text-xl font-bold">Expected Graduation: {school.graduationDate}</div>
+            </div>
+
+        </div>
+            <div>
+                <div class="mt-3 mb-1 text-xl w-full text-center">Relevant Coursework</div>
+                <div class="grid grid-cols-2">
+                
+                {school.courses.map((course: String) => (
+                    <div class="bg-gray-600/30 rounded p-1 m-1 hover:bg-gray-300/30 transition-all">{course}</div>       
+                ))}
+            </div>
+        </div>
+        
+    ))}
+</div>

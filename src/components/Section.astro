@@ -1,0 +1,25 @@
+---
+import Title from "./Title.astro";
+
+export interface Props {
+  classProp: string;
+  title: string;
+}
+
+const {classProp, title} = Astro.props;
+
+---
+
+
+<div class={`max-w-4xl m-auto ${classProp} px-5`}>
+    <Title text={title}></Title>
+
+    <div class="backdrop-blur-sm">
+        <div class="p-2">
+          <slot />
+        </div>
+        
+    </div>
+
+    
+</div>

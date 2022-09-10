@@ -1,0 +1,100 @@
+{
+    "name": "Michael Reeve",
+    "description": "Michael Reeve is a current junior at The University of Maryland studying Computer Science",
+    "email": "michael.s.reeve@gmail.com",
+    "about" : "I am a current SWE intern at Teradyne.\n\n Michael is currently a full-time student and is always looking for new opportunities. His interests include backend development and projects that help people finish their goals faster.",
+    "experience" : [
+        {
+            "company": "Teradyne",
+            "shortCompany": "Teradyne",
+            "title": "Software Engineer Intern",
+            "startDate": "May 2022",
+            "endDate": "August 2022",
+            "location" : "North Reading, MA",
+            "icon": "/teradyne.jpg",
+            "description": [
+                "Implemented a CI/CD pipeline for a team of over 20 members",
+                "Improved our team's build times by 250%",
+                "Developed using Jenkins and Docker images as agents, with support for Gitea"
+            ]
+        },
+        {
+            "company": "UMD Dept. of CS",
+            "shortCompany": "UMD CS Dept.",
+            "title": "Ambassador",
+            "startDate": "January 2022",
+            "endDate": "Present",
+            "location" : "College Park, MD",
+            "icon": "/UMDCS.png",
+            "description": [
+                "Supported events catered toward prospective CS students",
+                "Coordinated with teammates to host panel discussions with 150+ attendees",
+                "Hosted 1 on 1 advising sessions with current and prospective students to assist with their course selections and schedules"
+            ]
+        }
+    ],
+    "education" : [
+        {
+            "school": "University of Maryland",
+            "degree": "B.S. Computer Science",
+            "major": "Computer Science",
+            "location": "College Park, MD",
+            "graduationDate": "May 2024",
+            "img": "/umd_logo.png",
+            "courses": [
+                "Algorithims",
+                "Data Structures",
+                "Systems",
+                "Discrete Math",
+                "Org. of Programming Languages",
+                "Object Orientated Programming",
+                "Linear Algebra",
+                "Calc 1 & 2"
+            ]
+        }
+    ],
+    "skills" : {
+        "languages": [
+            {
+                "name" : "Java",
+                "svg" : "al;skdjf"
+            }, 
+            {
+                "name" : "C",
+                "svg" : "al;skdjf"
+            }, 
+            {
+                "name" : "OCaml",
+                "svg" : "al;skdjf"
+            },
+            {
+                "name" : "Python",
+                "svg" : "al;skdjf"
+            },
+            {
+                "name" : "Typescript",
+                "svg" : "al;skdjf"
+            }
+        ],
+        "frameworks" : [
+            {
+                "name" : "Astro",
+                "svg" : "al;skdjf"
+            }
+        ],
+        "tools" : [
+            {
+                "name" : "Git",
+                "svg" : "al;skdjf"
+            },
+            {
+                "name" : "Docker",
+                "svg" : "al;skdjf"
+            },
+            {
+                "name" : "Jenkins",
+                "svg" : "al;skdjf"
+            }
+        ]
+    }
+}

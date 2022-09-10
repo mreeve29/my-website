@@ -1,0 +1,24 @@
+---
+import { Image } from '@astrojs/image/components';
+
+const {about} = Astro.props;
+---
+
+
+<div class="flex items-center flex-col sm:flex-row sm:h-auto h-96">
+    <div class="left-col flex-auto order-1 sm:h-auto text-lg font-semibold text-white">
+        <div class="about-p">
+            {about}
+        </div>
+    </div>
+    
+    <div class="me-img-holder order-2 rounded-lg shadow-2xl shadow-white/30 border border-black/10">
+        <Image src="/assets/me_square.jpg" aspectRatio="1:1" alt="Image of Michael Reeve" width="600px" height="600px" style="border-radius:8px"></Image>
+    </div>
+</div>
+
+<style>
+    img{
+        width: 200px;
+    }
+</style>
