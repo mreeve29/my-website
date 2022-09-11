@@ -6,5 +6,5 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), image()],
-  site: 'https://mreeve29.github.io'
+  site: 'https://michaelsreeve.com'
 });
