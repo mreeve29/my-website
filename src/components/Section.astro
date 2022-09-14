@@ -14,10 +14,9 @@ const {classProp, title} = Astro.props;
 <div class={`max-w-4xl m-auto ${classProp} px-5`}>
     <Title text={title}></Title>
 
-    <div class="backdrop-blur-sm">
-        <div class="p-2 text-base md:text-lg lg:text-xl">
-          <slot/>
-        </div>
+    
+    <div class="p-2 text-base md:text-lg lg:text-xl">
+      <slot/>
         
     </div>
 

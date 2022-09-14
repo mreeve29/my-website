@@ -2,6 +2,7 @@
 export interface Job {
     company: string;
     shortCompany: string;
+    link: string;
     title: string;
     startDate: string;
     endDate: string;
@@ -20,7 +21,8 @@ const { experiences } = Astro.props;
                 <div class="pb-5 text-white">
                     <div class="text-lg md:text-xl lg:text-2xl">
                         <span class="font-bold">{j.title}</span> at{" "}
-                        {j.company}
+                        
+                        <a href={j.link} class="underline decoration-sky-500 hover:decoration-white transition-all">{j.company}</a>
                     </div>
                     <div class="mb-2">
                         {j.startDate} - {j.endDate}
