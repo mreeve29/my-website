@@ -15,7 +15,8 @@
             "icon": "/teradyne.jpg",
             "description": [
                 "Implemented a CI/CD pipeline for a team of over 20 members",
-                "Improved our team's build times by 250%",
+                "Improved our team's build times by 250% by implementing an automatic workflow that only recompiled necessary files",
+                "Leveraged the use of webhooks, allowing the pipeline to automatically start a build when a team member made a commit to the codebase",
                 "Developed using Jenkins and Docker images as agents, with support for Gitea"
             ]
         },
@@ -23,15 +24,15 @@
             "company": "UMD Dept. of C.S.",
             "shortCompany": "UMD CS Dept.",
             "link" : "https://cs.umd.edu",
-            "title": "Ambassador",
+            "title": "Computer Science Ambassador",
             "startDate": "January 2022",
             "endDate": "Present",
             "location" : "College Park, MD",
             "icon": "/UMDCS.png",
             "description": [
-                "Supported events catered toward prospective CS students",
+                "Supported events catered toward prospective Computer Science students",
                 "Coordinated with teammates to host panel discussions with 150+ attendees",
-                "Hosted 1 on 1 advising sessions with current and prospective students to assist with their course selections and schedules"
+                "Hosted 1 on 1 advising sessions with current students to assist with their course selections"
             ]
         }
     ],
@@ -47,6 +48,8 @@
                 "Algorithims",
                 "Data Structures",
                 "Systems",
+                "Data Science",
+                "Artificial Intelligence",
                 "Discrete Math",
                 "Org. of Programming Languages",
                 "Object Orientated Programming",
