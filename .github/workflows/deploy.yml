@@ -47,9 +47,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-astro
-
-      - name: Rename dist dir
-        run: mv ./dist ./build
+          path: ./build
 
       - name: Deploy Netlify
         uses: danakim/gh-action-deploy-netlify@master
