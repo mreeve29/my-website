@@ -28,15 +28,6 @@ jobs:
       - name: Build Astro
         shell: "bash"
         run: npm run build
-
-      - name: Test 1
-        run: ls
-      
-      - name: Test 2
-        run: ls ./dist
-      
-      - name: Test 3
-        run: ls ../
       
       - name: Deploy Site
         env:
