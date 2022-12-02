@@ -1,4 +1,4 @@
-name: Astro Build and Push To Netlify
+name: Astro Build and Deploy To Netlify
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,35 +29,17 @@ jobs:
         shell: "bash"
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-astro
-          path: dist/
+      - name: Test 1
+        run: ls
+      
+      - name: Test 2
+        run: ls ./dist
+      
+      - name: Test 3
+        run: ls ../
       
       - name: Deploy Site
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: netlify deploy --dir=dist --prod
-  
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v1
-
-  #     - name: Download artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: dist-astro
-  #         path: ./build
-
-  #     - name: Deploy Netlify
-  #       uses: danakim/gh-action-deploy-netlify@master
-  #       with:
-  #         AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-  #         SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-  #         DEPLOY_PROD: true
