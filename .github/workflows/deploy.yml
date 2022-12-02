@@ -1,35 +1,59 @@
-name: Github Pages Astro CI
+name: Astro Build and Push To Netlify
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+    branches: [master]
   workflow_dispatch:
-  
-# Allow this job to clone the repo and create a page deployment
+
 permissions:
   contents: read
-  pages: write
   id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v2          
-      - name: Install, build, and upload your site
-        uses: withastro/action@v0
+      - name: Checkout
+        uses: actions/checkout@v3
 
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build Astro
+        shell: "bash"
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-astro
+          path: dist/
+  
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-astro
+
+      - name: Rename dist dir
+        run: mv ./dist ./build
+
+      - name: Deploy Netlify
+        uses: danakim/gh-action-deploy-netlify@master
+        with:
+          AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          DEPLOY_PROD: true
