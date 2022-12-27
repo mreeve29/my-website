@@ -18,11 +18,11 @@ const { experiences } = Astro.props;
     <div>
         {
             experiences.map((j: Job) => (
-                <div class="pb-5 text-white">
+                <div class="pb-5">
                     <div class="text-lg md:text-xl lg:text-2xl">
                         <span class="font-bold">{j.title}</span> at{" "}
                         
-                        <a href={j.link} class="underline decoration-sky-500 hover:decoration-white transition-all">{j.company}</a>
+                        <a href={j.link} class="underline decoration-sky-500 hover:decoration-black dark:hover:decoration-white transition-all">{j.company}</a>
                     </div>
                     <div class="mb-2">
                         {j.startDate} - {j.endDate}

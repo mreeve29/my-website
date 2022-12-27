@@ -12,7 +12,7 @@ export interface School {
 const { schools } = Astro.props;
 ---
 
-<div class="text-white">
+<div>
     {schools.map((school : School) => (
         <div class="school flex justify-evenly">
             <div class="w-[75px] sm:w-28 md:w-36 lg:w-48">
@@ -30,7 +30,7 @@ const { schools } = Astro.props;
                 <div class="grid grid-cols-2 m-auto max-w-xl">
                 
                 {school.courses.map((course: String) => (
-                    <div class="bg-gray-600/30 rounded p-1 m-1 hover:bg-gray-300/30 transition-all">{course}</div>       
+                    <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">{course}</div>       
                 ))}
             </div>
         </div>

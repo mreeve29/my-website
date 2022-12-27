@@ -9,11 +9,11 @@ export interface Skill{
 const { skills } = Astro.props;
 
 ---
-<div class="text-white">
+<div>
     <div class="text-xl">Languages</div>
     <div class="grid grid-cols-2 sm:grid-cols-3">
         {skills["languages"].map((skill : Skill) => (
-            <div class="bg-gray-600/30 rounded p-1 m-1 hover:bg-gray-300/30 transition-all">
+            <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">
                 {skill.name}
             </div>
         ))}
@@ -22,7 +22,7 @@ const { skills } = Astro.props;
     <div class="text-xl">Frameworks</div>
     <div class="grid grid-cols-2 sm:grid-cols-3">
         {skills["frameworks"].map((skill : Skill) => (
-            <div class="bg-gray-600/30 rounded p-1 m-1 hover:bg-gray-300/30 transition-all">
+            <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">
                 {skill.name}
             </div>
         ))}
@@ -31,7 +31,7 @@ const { skills } = Astro.props;
     <div class="text-xl">Tools</div>
     <div class="grid grid-cols-2 sm:grid-cols-3">
         {skills["tools"].map((skill : Skill) => (
-            <div class="bg-gray-600/30 rounded p-1 m-1 hover:bg-gray-300/30 transition-all">
+            <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">
                 {skill.name}
             </div>
         ))}

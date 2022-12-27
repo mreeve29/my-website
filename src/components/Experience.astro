@@ -15,7 +15,7 @@ const { experiences } = Astro.props;
 
 <div class="flex flex-col sm:flex-row h-[520px] sm:h-auto">
     <div
-        class="tab-list item h-[120px] sm:h-auto hover:cursor-pointer font-semibold text-white border-r-0 sm:border-r-2 border-white border-opacity-75"
+        class="tab-list item h-[120px] sm:h-auto hover:cursor-pointer font-semibold border-r-0 sm:border-r-2 border-white border-opacity-75"
     >
         <ul class="">
             {
@@ -39,7 +39,7 @@ const { experiences } = Astro.props;
         {
             experiences.map((j: Job) => (
                 <div
-                    class="tab-content pl-11 pb-2 pr-3 sm:h-80 sm:pt-5 text-white sm:w-[800px] hidden"
+                    class="tab-content pl-11 pb-2 pr-3 sm:h-80 sm:pt-5 sm:w-[800px] hidden"
                     job-tab={j.shortCompany}
                 >
                     <div class="company text-lg">
