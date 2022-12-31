@@ -2,23 +2,18 @@
     "name": "Michael Reeve",
     "description": "Michael Reeve is a current junior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about" : "I am a current junior at The University of Maryland studying Computer Science. During Summer 2022, I was a software engineer intern at Teradyne. My interests include backend development and projects that help people reach their goals faster.",
+    "about" : "I am a junior Computer Science student at the University of Maryland and a software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skillset in the field.",
     "experience" : [
         {
             "company": "Teradyne",
             "shortCompany": "Teradyne",
             "link" : "https://teradyne.com",
             "title": "Software Engineer Intern",
-            "startDate": "May 2022",
-            "endDate": "August 2022",
+            "startDate": "January 2023",
+            "endDate": "Present",
             "location" : "North Reading, MA",
             "icon": "/teradyne.jpg",
-            "description": [
-                "Implemented a CI/CD pipeline for a team of over 20 members",
-                "Improved our team's build times by 250% by implementing an automatic workflow that only recompiled necessary files",
-                "Leveraged the use of webhooks, allowing the pipeline to automatically start a build when a team member made a commit to the codebase",
-                "Developed using Jenkins and Docker images as agents, with support for Gitea"
-            ]
+            "description": []
         },
         {
             "company": "UMD Dept. of C.S.",
@@ -34,7 +29,24 @@
                 "Coordinated with teammates to host panel discussions with 150+ attendees",
                 "Hosted 1 on 1 advising sessions with current students to assist with their course selections"
             ]
+        },
+        {
+            "company": "Teradyne",
+            "shortCompany": "Teradyne",
+            "link" : "https://teradyne.com",
+            "title": "Software Engineer Intern",
+            "startDate": "May 2022",
+            "endDate": "August 2022",
+            "location" : "North Reading, MA",
+            "icon": "/teradyne.jpg",
+            "description": [
+                "Implemented a CI/CD pipeline for a team of over 20 members",
+                "Improved our team's build times by 250% by implementing an automatic workflow that only recompiled necessary files",
+                "Leveraged the use of webhooks, allowing the pipeline to automatically start a build when a team member made a commit to the codebase",
+                "Developed using Jenkins and Docker images as agents, with support for Gitea"
+            ]
         }
+        
     ],
     "education" : [
         {
@@ -58,48 +70,18 @@
             ]
         }
     ],
-    "skills" : {
-        "languages": [
-            {
-                "name" : "Java",
-                "svg" : "al;skdjf"
-            }, 
-            {
-                "name" : "C",
-                "svg" : "al;skdjf"
-            }, 
-            {
-                "name" : "OCaml",
-                "svg" : "al;skdjf"
-            },
-            {
-                "name" : "Python",
-                "svg" : "al;skdjf"
-            },
-            {
-                "name" : "Typescript",
-                "svg" : "al;skdjf"
-            }
-        ],
-        "frameworks" : [
-            {
-                "name" : "Astro",
-                "svg" : "al;skdjf"
-            }
-        ],
-        "tools" : [
-            {
-                "name" : "Git",
-                "svg" : "al;skdjf"
-            },
-            {
-                "name" : "Docker",
-                "svg" : "al;skdjf"
-            },
-            {
-                "name" : "Jenkins",
-                "svg" : "al;skdjf"
-            }
-        ]
-    }
+    "skills" : [
+        { 
+            "category" : "Languages",
+            "skillList" : ["Java", "C", "OCaml", "Python", "TypeScript"]
+        },
+        {
+            "category" : "Frameworks",
+            "skillList" : ["Astro"]
+        },
+        {
+            "category" : "Tools",
+            "skillList" : ["Git", "Docker", "Jenkins"]
+        }
+    ]
 }
