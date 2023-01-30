@@ -2,19 +2,8 @@
     "name": "Michael Reeve",
     "description": "Michael Reeve is a current junior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about" : "I am a junior Computer Science student at the University of Maryland and a software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skillset in the field.",
+    "about" : "I am a junior Computer Science student at the University of Maryland and a former software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
     "experience" : [
-        {
-            "company": "Teradyne",
-            "shortCompany": "Teradyne",
-            "link" : "https://teradyne.com",
-            "title": "Software Engineer Intern",
-            "startDate": "January 2023",
-            "endDate": "Present",
-            "location" : "North Reading, MA",
-            "icon": "/teradyne.jpg",
-            "description": []
-        },
         {
             "company": "UMD Dept. of C.S.",
             "shortCompany": "UMD CS Dept.",
@@ -28,6 +17,19 @@
                 "Supported events catered toward prospective Computer Science students",
                 "Coordinated with teammates to host panel discussions with 150+ attendees",
                 "Hosted 1 on 1 advising sessions with current students to assist with their course selections"
+            ]
+        },
+        {
+            "company": "Teradyne",
+            "shortCompany": "Teradyne",
+            "link" : "https://teradyne.com",
+            "title": "Software Engineer Intern",
+            "startDate": "January 2023",
+            "endDate": "January 2023",
+            "location" : "North Reading, MA",
+            "icon": "/teradyne.jpg",
+            "description": [
+                "Added debugging capabilities to a Visual Basic interpreter in C#"
             ]
         },
         {
@@ -57,16 +59,16 @@
             "graduationDate": "May 2024",
             "img": "/umd_logo.png",
             "courses": [
-                "Algorithims",
+                "Algorithms",
                 "Data Structures",
                 "Systems",
+                "Compilers",
                 "Data Science",
                 "Artificial Intelligence",
                 "Discrete Math",
-                "Org. of Programming Languages",
-                "Object Orientated Programming",
                 "Linear Algebra",
-                "Calc 1 & 2"
+                "Org. of Programming Languages",
+                "Object Orientated Programming"    
             ]
         }
     ],
