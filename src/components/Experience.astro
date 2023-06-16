@@ -2,6 +2,7 @@
 export interface Job {
     company: string;
     shortCompany: string;
+    link: string;
     title: string;
     startDate: string;
     endDate: string;
@@ -13,43 +14,20 @@ export interface Job {
 const { experiences } = Astro.props;
 ---
 
-<div class="flex flex-col sm:flex-row h-[520px] sm:h-auto">
-    <div
-        class="tab-list item h-[120px] sm:h-auto hover:cursor-pointer font-semibold border-r-0 sm:border-r-2 border-white border-opacity-75"
-    >
-        <ul class="">
-            {
-                experiences.map((j: Job) => (
-                    <li class="">
-                        <div
-                            class={"h-11 w-40 companySelectorDiv"}
-                            job-tab={j.shortCompany}
-                        >
-                            <div class="flex flex-col justify-center items-center h-auto w-auto transition-all">
-                                <div class=" pl-3 pt-3">{j.shortCompany}</div>
-                            </div>
-                        </div>
-                    </li>
-                ))
-            }
-        </ul>
-    </div>
-    <hr class="mt-2.5 mb-2.5" />
+<div class="flex flex-col sm:flex-row">
     <div>
         {
             experiences.map((j: Job) => (
-                <div
-                    class="tab-content pl-11 pb-2 pr-3 sm:h-80 sm:pt-5 sm:w-[800px] hidden"
-                    job-tab={j.shortCompany}
-                >
-                    <div class="company text-lg">
-                        <span class="text-xl font-bold">{j.title}</span> at{" "}
-                        {j.company}
+                <div class="mb-3 pb-2 p-3 bg-white dark:bg-[#161b22] rounded border dark:border-[#21262d]">
+                    <div class="text-lg md:text-xl lg:text-2xl">
+                        <span class="font-bold">{j.title}</span> at{" "}
+                        
+                        <a href={j.link} class="underline decoration-sky-500 hover:decoration-black dark:hover:decoration-white transition-all">{j.company}</a>
                     </div>
-                    <div class="dates mb-4">
-                        {j.startDate} - {j.endDate}
+                    <div>
+                        {j.startDate !== j.endDate ? `${j.startDate} - ${j.endDate}` : j.startDate}
                     </div>
-                    <ul class="list-disc list-outside">
+                    <ul class="list-disc list-outside pl-6">
                         {j.description.map((line) => (
                             <li class="mb-2">{line}</li>
                         ))}
@@ -59,59 +37,3 @@ const { experiences } = Astro.props;
         }
     </div>
 </div>
-
-<script is:inline>
-    function setJob(jobName) {
-        document.querySelectorAll(".companySelectorDiv").forEach((content) => {
-            if (content.getAttribute("job-tab") == jobName) {
-                content.classList.add("active-job-button");
-            } else {
-                content.classList.remove("active-job-button");
-            }
-        });
-
-        document.querySelectorAll(".tab-content").forEach((content) => {
-            if (content.getAttribute("job-tab") == jobName) {
-                content.classList.add("active-job-content");
-            } else {
-                content.classList.remove("active-job-content");
-            }
-        });
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-        var buttons = document.querySelectorAll(".companySelectorDiv");
-        if (buttons.length > 0) {
-            buttons.forEach((b) => {
-                b.addEventListener("click", () => {
-                    var baseJob = b.getAttribute("job-tab");
-                    if (baseJob) {
-                        setJob(baseJob);
-                    }
-                });
-            });
-
-            var baseJob = buttons[0].getAttribute("job-tab");
-            if (baseJob) {
-                setJob(baseJob);
-            }
-        }
-    });
-</script>
-
-<style>
-    .active-job-button {
-        font-size: large;
-        font-weight: bold;
-        color: rgb(134, 173, 255);
-    }
-
-    .companySelectorDiv:hover {
-        font-size: large;
-        font-weight: bold;
-    }
-
-    .active-job-content {
-        display: block;
-    }
-</style>

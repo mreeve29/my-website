@@ -5,8 +5,7 @@ import Header from "../components/Header.astro";
 import Name from "../components/Name.astro";
 import About from "../components/About.astro";
 import Education from "../components/Education.astro";
-import Experience from "../components/Experience.astro";
-import ExperienceNew from "../components/ExperienceNew.astro";
+import ExperienceNew from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
@@ -15,7 +14,7 @@ import Footer from "../components/Footer.astro";
 
 import Data from "../data/data.json";
 
-const { about, education, experience, skills } = Data;
+const { about, education, experience, skills, projects } = Data;
 ---
 
 <Layout title="Michael Reeve - Software Engineer">
@@ -24,9 +23,9 @@ const { about, education, experience, skills } = Data;
         <Name name="Michael Reeve" />
         <Section title="About Me" classProp="pt-10">
             <About about={about} />
-            <Contact classProp="mt-10"/>
+            <Contact classProp="mt-10" />
         </Section>
-        
+
         <Section title="Experience" classProp="pt-10">
             <ExperienceNew experiences={experience} />
         </Section>
@@ -34,13 +33,12 @@ const { about, education, experience, skills } = Data;
         <Section title="Education" classProp="pt-5">
             <Education schools={education} />
         </Section>
-        <!-- <Section title="Projects" classProp="pt-10">
-            <Projects />
-        </Section> -->
+        <Section title="Projects" classProp="pt-10">
+            <Projects projects={projects} />
+        </Section>
 
         <Section title="Skills" classProp="pt-10">
-            <Skills skills={skills}/>
-            <Contact classProp="mt-5"/>
+            <Skills skills={skills} />
         </Section>
     </main>
     <Footer />

@@ -1,42 +1,55 @@
 ---
-
-export interface Repo {
-    name: string;
-    html_url: string;
-    description: string;
-    language: string;
+export interface Project {
+    title: string;
+    year: Number;
+    description: string[];
+    keywords: string[];
+    link: string;
+    live_site?: string;
 }
 
-const colors_response = await fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json");
-const colors = await colors_response.json();
-
-const repo_response = await fetch("https://api.github.com/users/mreeve29/repos?sort=updated");
-const repos = await repo_response.json();
+const { projects } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 text-white">
-{
-    repos.slice(0, 4).map((repo : Repo) => (
-        <a href={repo.html_url}>
-            <div class="bg-gradient-to-r from-sky-400 to-blue-500 p-[2.5px] m-2 rounded hover:bg-gradient-to-tl hover:from-sky-100 hover:to-blue-400 transition-all">
-                <div class="bg-black p-2 rounded">
-                    <div class="flex content-center justify-between">
-                        <div class="text-xl">{repo.name}</div>
-                        <div class="text-lg flex items-center">
-                            <svg height="20" width="20" class="float-left mr-1">
-                                <circle cx="10" cy="10" r="8" fill={
-                                    colors[repo.language == null ? "Markdown" : repo.language].color
-                                } />
-                            </svg>
-                            {repo.language == null ? "Markdown" : repo.language}
+<div class="grid grid-cols-1">
+    {
+        projects.map((proj: Project) => (
+            <div class="mb-3 pb-2 p-3 bg-white dark:bg-[#161b22] rounded border dark:border-[#21262d]">
+                <div class="text-lg md:text-xl lg:text-2xl">
+                    <span class="font-bold">{proj.title}</span>
+                </div>
+                <div>{proj.year}</div>
+                <ul class="list-disc list-outside pl-6">
+                    {proj.description.map((line) => (
+                        <li class="mb-2">{line}</li>
+                    ))}
+                </ul>
+                <div class="flex flex-row flex-wrap">
+                    {proj.keywords.map((str: String) => (
+                        <div class="bg-white dark:bg-[#161b22] rounded-2xl py-1 px-3 my-2 mr-3 ml-0 border dark:border-[#313843]">
+                            {str}
                         </div>
-                    </div>
-                    <div class="text-lg">
-                        {repo.description}
-                    </div>
+                    ))}
+                </div>
+                <div class="flex flex-row">
+                    {proj.live_site ? (
+                        <a
+                            href={proj.live_site}
+                            target="_blank"
+                            class="my-2 mr-3 ml-0"
+                        >
+                            <div class="border border-sky-500 transition-all hover:bg-sky-400 sm:m-0 rounded font-bold text-sky-500 hover:text-white text-center align-middle p-2 py-1 cursor-pointer">
+                                Live Site
+                            </div>
+                        </a>
+                    ) : null}
+                    <a href={proj.link} target="_blank" class="my-2 mr-3 ml-0">
+                        <div class="border border-sky-500 transition-all hover:bg-sky-400 sm:m-0 rounded font-bold text-sky-500 hover:text-white text-center align-middle p-2 py-1 cursor-pointer">
+                            Source Code
+                        </div>
+                    </a>
                 </div>
             </div>
-        </a>
-    ))
-}
+        ))
+    }
 </div>

@@ -2,34 +2,20 @@
     "name": "Michael Reeve",
     "description": "Michael Reeve is a current junior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about" : "I am a junior Computer Science student at the University of Maryland and a former software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
+    "about" : "I am a rising senior Computer Science student at the University of Maryland and a current software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
     "experience" : [
-        {
-            "company": "UMD Dept. of C.S.",
-            "shortCompany": "UMD CS Dept.",
-            "link" : "https://cs.umd.edu",
-            "title": "Computer Science Ambassador",
-            "startDate": "January 2022",
-            "endDate": "Present",
-            "location" : "College Park, MD",
-            "icon": "/UMDCS.png",
-            "description": [
-                "Supported events catered toward prospective Computer Science students",
-                "Coordinated with teammates to host panel discussions with 150+ attendees",
-                "Hosted 1 on 1 advising sessions with current students to assist with their course selections"
-            ]
-        },
         {
             "company": "Teradyne",
             "shortCompany": "Teradyne",
             "link" : "https://teradyne.com",
             "title": "Software Engineer Intern",
-            "startDate": "January 2023",
-            "endDate": "January 2023",
+            "startDate": "June 2023",
+            "endDate": "Present",
             "location" : "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
-                "Added debugging capabilities to a Visual Basic interpreter in C#"
+                "Added debugging capabilities to a Visual Basic interpreter in C#",
+                "Developed a VSCode Extension to connect to the VB Debugger via the Debug Adapter Protocol"
             ]
         },
         {
@@ -79,11 +65,67 @@
         },
         {
             "category" : "Frameworks",
-            "skillList" : ["Astro"]
+            "skillList" : ["Astro", "Flask"]
         },
         {
             "category" : "Tools",
             "skillList" : ["Git", "Docker", "Jenkins"]
+        }
+    ],
+    "projects":[
+        {
+            "title": "Personal Website",
+            "year": 2023,
+            "description": [
+                "Created a statically rendered portfolio website using Astro, and Tailwind CSS.",
+                "Took advantage of Astro's component-based structure to layout my portfolio in a consistent and easy to edit manner.",
+                "Hosted on Netlify, using GitHub Actions as a CI/CD pipeline to automate building, testing, and distribution of the website via the Netlify CLI."
+            ],
+            "keywords": [
+                "Astro", "TailwindCSS", "CI/CD", "GitHub Actions", "Netlify"
+            ],
+            "link": "https://github.com/mreeve29/my-website"
+        },
+        {
+            "title": "Slack Tasks Bot",
+            "year": 2023,
+            "description": [
+                "A Slack bot written in JavaScript to manage tasks in a Slack workplace, leveraging the Slack Bolt API.",
+                "Supports assigning members to tasks, and sending messages to members asking to take on tasks.",
+                "Uses SQLite as a backend database."
+            ],
+            "keywords": [
+                "JavaScript", "NodeJS", "SQLite"
+            ],
+            "link": "https://github.com/mreeve29/slack-tasks-bot"
+        },
+        {
+            "title": "Restaurant Review Website",
+            "year": 2023,
+            "description": [
+                "A full stack application to view and review restaurants in College Park, MD, written in Python using Flask.",
+                "Implements secure user management with CSRF safe forms, and hashed passwords.",
+                "Uses MongoDB as a backend database."
+            ],
+            "keywords": [
+                "Python", "Flask", "MongoDB", "Full Stack"
+            ],
+            "link": "https://github.com/mreeve29/cmsc388j_final",
+            "live_site": "https://cmsc388jfinal-production.up.railway.app/"
+        },
+        {
+            "title": "Twitter Data Analysis and Sentiment",
+            "year": 2022,
+            "description": [
+                "Analyzed Elon Musk's Twitter activity throughout 2022 and drew conclusions based on ML sentiment algorithms.",
+                "Gathered data from Kaggle and Twitter API.",
+                "Used Python and Pandas to compile csvs and compute statistical equations."
+            ],
+            "keywords": [
+                "Python", "Pandas", "Machine Learning", "API"
+            ],
+            "link": "https://github.com/mreeve29/mreeve29.github.io",
+            "live_site": "https://mreeve29.github.io/"
         }
     ]
 }
