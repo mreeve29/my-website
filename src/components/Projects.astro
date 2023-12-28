@@ -24,9 +24,9 @@ const { projects } = Astro.props;
                         <li class="mb-2">{line}</li>
                     ))}
                 </ul>
-                <div class="flex flex-row flex-wrap">
+                <div class="flex flex-row flex-wrap my-1">
                     {proj.keywords.map((str: String) => (
-                        <div class="bg-white dark:bg-[#161b22] rounded-2xl py-1 px-3 my-2 mr-3 ml-0 border dark:border-[#313843]">
+                        <div class="bg-white dark:bg-[#161b22] rounded-2xl py-1 px-3 my-1 mr-3 ml-0 border dark:border-[#313843]">
                             {str}
                         </div>
                     ))}

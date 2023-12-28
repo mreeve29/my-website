@@ -1,31 +1,32 @@
 {
     "name": "Michael Reeve",
-    "description": "Michael Reeve is a current junior at The University of Maryland studying Computer Science",
+    "description": "Michael Reeve - senior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about" : "I am a rising senior Computer Science student at the University of Maryland and a current software engineer intern at Teradyne. My skills include CI/CD workflows and backend development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
-    "experience" : [
+    "about": "I am a senior Computer Science student at the University of Maryland and a former software engineer intern at Teradyne. My skills include CI/CD workflows and language development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
+    "experience": [
         {
             "company": "Teradyne",
             "shortCompany": "Teradyne",
-            "link" : "https://teradyne.com",
+            "link": "https://teradyne.com",
             "title": "Software Engineer Intern",
             "startDate": "June 2023",
-            "endDate": "Present",
-            "location" : "North Reading, MA",
+            "endDate": "August 2023",
+            "location": "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
-                "Added debugging capabilities to a Visual Basic interpreter in C#",
-                "Developed a VSCode Extension to connect to the VB Debugger via the Debug Adapter Protocol"
+                "Designed a language support extension for VS Code for a custom internal language.",
+                "Implemented a debugger, and LSP features such as syntax highlighting, autocomplete (Intellisense), function signature support, document outlines, etc.",
+                "Leveraged concepts of parsers, grammar, ASTs, and complied with Microsoft's LSP/DAP protocols."
             ]
         },
         {
             "company": "Teradyne",
             "shortCompany": "Teradyne",
-            "link" : "https://teradyne.com",
+            "link": "https://teradyne.com",
             "title": "Software Engineer Intern",
             "startDate": "May 2022",
             "endDate": "August 2022",
-            "location" : "North Reading, MA",
+            "location": "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
                 "Implemented a CI/CD pipeline for a team of over 20 members",
@@ -34,9 +35,8 @@
                 "Developed using Jenkins and Docker images as agents, with support for Gitea"
             ]
         }
-        
     ],
-    "education" : [
+    "education": [
         {
             "school": "University of Maryland",
             "degree": "B.S. Computer Science",
@@ -51,28 +51,44 @@
                 "Compilers",
                 "Data Science",
                 "Artificial Intelligence",
+                "Computer and Network Security",
                 "Discrete Math",
                 "Linear Algebra",
                 "Org. of Programming Languages",
-                "Object Orientated Programming"    
+                "Object Orientated Programming"
             ]
         }
     ],
-    "skills" : [
-        { 
-            "category" : "Languages",
-            "skillList" : ["Java", "C", "OCaml", "Python", "TypeScript"]
+    "skills": [
+        {
+            "category": "Languages",
+            "skillList": [
+                "Java",
+                "C#",
+                "C",
+                "Python",
+                "TypeScript & JavaScript"
+            ]
         },
         {
-            "category" : "Frameworks",
-            "skillList" : ["Astro", "Flask"]
+            "category": "Frameworks",
+            "skillList": [
+                "NodeJS",
+                "Flask",
+                "Unity"
+            ]
         },
         {
-            "category" : "Tools",
-            "skillList" : ["Git", "Docker", "Jenkins"]
+            "category": "Tools",
+            "skillList": [
+                "Git",
+                "Docker",
+                "Jenkins",
+                "Agile Development"
+            ]
         }
     ],
-    "projects":[
+    "projects": [
         {
             "title": "Personal Website",
             "year": 2023,
@@ -82,7 +98,11 @@
                 "Hosted on Netlify, using GitHub Actions as a CI/CD pipeline to automate building, testing, and distribution of the website via the Netlify CLI."
             ],
             "keywords": [
-                "Astro", "TailwindCSS", "CI/CD", "GitHub Actions", "Netlify"
+                "Astro",
+                "TailwindCSS",
+                "CI/CD",
+                "GitHub Actions",
+                "Netlify"
             ],
             "link": "https://github.com/mreeve29/my-website"
         },
@@ -95,7 +115,9 @@
                 "Uses SQLite as a backend database."
             ],
             "keywords": [
-                "JavaScript", "NodeJS", "SQLite"
+                "JavaScript",
+                "NodeJS",
+                "SQLite"
             ],
             "link": "https://github.com/mreeve29/slack-tasks-bot"
         },
@@ -108,10 +130,12 @@
                 "Uses MongoDB as a backend database."
             ],
             "keywords": [
-                "Python", "Flask", "MongoDB", "Full Stack"
+                "Python",
+                "Flask",
+                "MongoDB",
+                "Full Stack"
             ],
-            "link": "https://github.com/mreeve29/cmsc388j_final",
-            "live_site": "https://cmsc388jfinal-production.up.railway.app/"
+            "link": "https://github.com/mreeve29/cmsc388j_final"
         },
         {
             "title": "Twitter Data Analysis and Sentiment",
@@ -122,7 +146,10 @@
                 "Used Python and Pandas to compile csvs and compute statistical equations."
             ],
             "keywords": [
-                "Python", "Pandas", "Machine Learning", "API"
+                "Python",
+                "Pandas",
+                "Machine Learning",
+                "API"
             ],
             "link": "https://github.com/mreeve29/mreeve29.github.io",
             "live_site": "https://mreeve29.github.io/"
