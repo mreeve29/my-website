@@ -1,45 +1,60 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+import Box from "./Box.astro";
+
+interface Props {
+  schools: School[];
+}
 
 export interface School {
     school: String;
     img: String;
     degree: String;
-    graduationDate: String;
-    courses : String[];
+    startDate: String;
+    endDate: String;
+    courses: String[];
 }
 
 const { schools } = Astro.props;
+
+const schoolImages = await import.meta.glob<{ default: ImageMetadata }>('/src/assets/schools/*.{jpeg,jpg,png}');
 ---
 
 <div>
-    {schools.map((school : School) => (
-        <div class="school flex justify-evenly">
-            <div class="w-[75px] sm:w-28 md:w-36 lg:w-48">
-                <Image src={`/assets/${school.img}`} alt={`${school.school}-logo`} width={300} height={300} quality={100}></Image>
-            </div>
-            <div class="flex flex-col justify-center font-bold">
-                <div class="text-xl sm:text-4xl md:text-5xl">{school.school}</div>
-                <div class="text-sm sm:text-xl md:text-2xl">{school.degree}</div>
-                <div class="text-sm sm:text-xl md:text-2xl">Expected Graduation: {school.graduationDate}</div>
-            </div>
-
-        </div>
-            <div>
-                <div class="mt-3 mb-1 text-xl w-full text-center">Relevant Coursework</div>
-                <div class="grid grid-cols-2 m-auto max-w-xl">
-                
-                {school.courses.map((course: String) => (
-                    <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">{course}</div>       
-                ))}
-            </div>
-        </div>
-        
-    ))}
+    {
+        schools.map((school: School) => (
+            <Box>
+                <div class="flex">
+                    <div class="w-[75px] sm:w-28 md:w-36 lg:w-40">
+                        <Image
+                            src={schoolImages[`/src/assets/schools/${school.img}`]()}
+                            alt={`${school.school}-logo`}
+                            width={300}
+                            height={300}
+                            quality={100}
+                        />
+                    </div>
+                    <div class="flex flex-col justify-evenly ml-2 md:ml-3 lg:ml-5">
+                        <div class="text-xl md:text-2xl lg:text-4xl font-bold">
+                            {school.school}
+                        </div>
+                        <div class="text-lg sm:text-xl md:text-2xl">
+                            {school.degree}
+                        </div>
+                        <div class="text-lg sm:text-xl md:text-2xl">
+                            {school.startDate} - {school.endDate}
+                        </div>
+                    </div>
+                </div>
+            </Box>
+        ))
+    }
 </div>
 
 <style>
-    .school-img{
+    .school-img {
         width: 75px;
     }
 </style>

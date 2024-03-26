@@ -1,7 +1,8 @@
 ---
 import Contact from "../components/Contact.astro";
 
-import { Image } from "@astrojs/image/components";
+import { Image } from 'astro:assets';
+import me_square from "../assets/me_square.jpg";
 
 const { about } = Astro.props;
 ---
@@ -17,9 +18,8 @@ const { about } = Astro.props;
 
     <div class="w-[200px] sm:w-full order-2 rounded-lg">
         <Image
-            src="/assets/me_square.jpg"
-            aspectRatio="1:1"
-            alt="Image of Michael Reeve"
+            src={me_square}
+            alt="Michael Reeve"
             width="600"
             height="600"
             style="border-radius:8px"

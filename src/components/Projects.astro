@@ -1,4 +1,7 @@
 ---
+import Box from "./Box.astro";
+import Tile from "./Tile.astro";
+
 export interface Project {
     title: string;
     year: Number;
@@ -14,7 +17,7 @@ const { projects } = Astro.props;
 <div class="grid grid-cols-1">
     {
         projects.map((proj: Project) => (
-            <div class="mb-3 pb-2 p-3 bg-white dark:bg-[#161b22] rounded border dark:border-[#21262d]">
+            <Box>
                 <div class="text-lg md:text-xl lg:text-2xl">
                     <span class="font-bold">{proj.title}</span>
                 </div>
@@ -26,9 +29,7 @@ const { projects } = Astro.props;
                 </ul>
                 <div class="flex flex-row flex-wrap my-1">
                     {proj.keywords.map((str: String) => (
-                        <div class="bg-white dark:bg-[#161b22] rounded-2xl py-1 px-3 my-1 mr-3 ml-0 border dark:border-[#313843]">
-                            {str}
-                        </div>
+                        <Tile>{str}</Tile>
                     ))}
                 </div>
                 <div class="flex flex-row">
@@ -49,7 +50,7 @@ const { projects } = Astro.props;
                         </div>
                     </a>
                 </div>
-            </div>
+            </Box>
         ))
     }
 </div>

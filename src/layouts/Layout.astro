@@ -1,4 +1,6 @@
 ---
+import { SEO } from 'astro-seo';
+
 export interface Props {
     title: string;
 }
@@ -25,9 +27,17 @@ const { title } = Astro.props;
             content="#0f172a"
             media="(prefers-color-scheme: dark)"
         />
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet" /> -->
+        <SEO 
+            title={title}
+            description="Michael Reeve's Portfolio"
+            openGraph={{
+                basic: {
+                  title: `${title}`,
+                  type: "profile",
+                  image: "https://avatars.githubusercontent.com/u/26291638?v=4",
+                },
+              }}
+        />
     </head>
     <body
         class="text-black dark:text-white bg-gradient-to-tl from-slate-100 to-zinc-100 dark:from-stone-900 dark:to-slate-900 transition-all"

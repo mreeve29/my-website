@@ -42,8 +42,9 @@
             "degree": "B.S. Computer Science",
             "major": "Computer Science",
             "location": "College Park, MD",
-            "graduationDate": "May 2024",
-            "img": "/umd_logo.png",
+            "startDate": "2020",
+            "endDate": "2024",
+            "img": "umd_logo.png",
             "courses": [
                 "Algorithms",
                 "Data Structures",
@@ -75,7 +76,8 @@
             "skillList": [
                 "NodeJS",
                 "Flask",
-                "Unity"
+                "Unity",
+                "Astro"
             ]
         },
         {
@@ -126,7 +128,7 @@
             "year": 2023,
             "description": [
                 "A full stack application to view and review restaurants in College Park, MD, written in Python using Flask.",
-                "Implements secure user management with CSRF safe forms, and hashed passwords.",
+                "Implements secure user management with CSRF safe forms and hashed passwords.",
                 "Uses MongoDB as a backend database."
             ],
             "keywords": [
@@ -138,12 +140,12 @@
             "link": "https://github.com/mreeve29/cmsc388j_final"
         },
         {
-            "title": "Twitter Data Analysis and Sentiment",
+            "title": "Twitter (X) Data Analysis and Sentiment",
             "year": 2022,
             "description": [
-                "Analyzed Elon Musk's Twitter activity throughout 2022 and drew conclusions based on ML sentiment algorithms.",
-                "Gathered data from Kaggle and Twitter API.",
-                "Used Python and Pandas to compile csvs and compute statistical equations."
+                "Analyzed Elon Musk's Twitter (X) activity throughout 2022 and drew conclusions based on ML sentiment algorithms.",
+                "Gathered data from Kaggle and using Twitter (X)'s API.",
+                "Used Python and Pandas to compile CSV files and compute statistical equations."
             ],
             "keywords": [
                 "Python",
