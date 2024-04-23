@@ -1,43 +1,52 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
-import Header from "../components/Header.astro";
 import Name from "../components/Name.astro";
 import About from "../components/About.astro";
 import Education from "../components/Education.astro";
-import ExperienceNew from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
+import Experiences from "../components/Experiences.astro";
+import ProjectsDisplay from "../components/ProjectsDisplay.astro";
 import Skills from "../components/Skills.astro";
-import Contact from "../components/Contact.astro";
+import LargeButtonLink from "../components/LargeButtonLink.astro";
 
 import Footer from "../components/Footer.astro";
 
 import Data from "../data/data.json";
+import HeaderReact from "../components/HeaderReact";
 
 const { about, education, experience, skills, projects } = Data;
 ---
 
 <Layout title="Michael Reeve - Software Engineer">
-    <Header />
-    <main class="w-full sm:max-w-screen-2xl m-auto">
+    <HeaderReact activePath={"home"} client:load/>
+    <main class="w-full sm:max-w-screen-2xl m-auto mt-0">
         <Name name="Michael Reeve" />
-        <Section title="About Me" classProp="pt-10">
+        <Section title="About Me">
             <About about={about} />
-            <Contact classProp="mt-10" />
+            <LargeButtonLink classProp="mt-10" link="contact.html">
+                Contact Me!
+            </LargeButtonLink>
         </Section>
 
-        <Section title="Experience" classProp="pt-10">
-            <ExperienceNew experiences={experience} />
+        <Section title="Recent Experience">
+            <Experiences experiences={experience} select={[0]}/>
+            <LargeButtonLink classProp="mt-10" link="experience.html">
+                View All Experiences
+            </LargeButtonLink>
+        </Section>
+
+        <Section title="Featured Projects">
+            <ProjectsDisplay projects={projects} select={[1,3]} />
+            <LargeButtonLink classProp="mt-10" link="projects.html">
+                View All Projects
+            </LargeButtonLink>
         </Section>
 
         <Section title="Education" classProp="pt-5">
             <Education schools={education} />
         </Section>
-        <Section title="Projects" classProp="pt-10">
-            <Projects projects={projects} />
-        </Section>
 
-        <Section title="Skills" classProp="pt-10">
+        <Section title="Skills" classProp="sm:pb-24">
             <Skills skills={skills} />
         </Section>
     </main>

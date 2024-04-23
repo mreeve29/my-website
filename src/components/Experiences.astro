@@ -1,5 +1,6 @@
 ---
 import Box from "./Box.astro";
+import Tile from "./Tile.astro";
 
 export interface Job {
     company: string;
@@ -11,15 +12,21 @@ export interface Job {
     location: string;
     icon: string;
     description: string[];
+    keywords: string[];
 }
 
-const { experiences } = Astro.props;
----
+const { experiences, select } = Astro.props;
 
+let selectedJobs = experiences as Job[];
+
+if (select){
+    selectedJobs = selectedJobs.filter((j : Job, i: number) => select.includes(i));
+}
+---
 <div class="flex flex-col sm:flex-row">
     <div>
         {
-            experiences.map((j: Job) => (
+            selectedJobs.map((j: Job) => (
                 <Box>
                     <div class="text-lg md:text-xl lg:text-2xl">
                         <span class="font-bold">{j.title}</span> at{" "}
@@ -40,6 +47,11 @@ const { experiences } = Astro.props;
                             <li class="mb-2">{line}</li>
                         ))}
                     </ul>
+                    <div class="flex flex-row flex-wrap my-1">
+                        {j.keywords.map((str: String) => (
+                            <Tile>{str}</Tile>
+                        ))}
+                    </div>
                 </Box>
             ))
         }

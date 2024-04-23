@@ -1,5 +1,6 @@
 ---
 import Box from "./Box.astro";
+import SlideShow from "./ProjectSlideshow";
 import Tile from "./Tile.astro";
 
 export interface Project {
@@ -8,16 +9,26 @@ export interface Project {
     description: string[];
     keywords: string[];
     link: string;
+    images: string[];
     live_site?: string;
 }
 
-const { projects } = Astro.props;
+const { projects, select } = Astro.props;
+
+let selectedProjects = projects as Project[];
+
+if (select){
+    selectedProjects = selectedProjects.filter((e : Project, i: number) => select.includes(i));
+}
 ---
 
 <div class="grid grid-cols-1">
     {
-        projects.map((proj: Project) => (
+        selectedProjects.map((proj: Project) => (
             <Box>
+                <div>
+                    <SlideShow images={proj.images} client:load/>
+                </div>
                 <div class="text-lg md:text-xl lg:text-2xl">
                     <span class="font-bold">{proj.title}</span>
                 </div>
@@ -54,3 +65,13 @@ const { projects } = Astro.props;
         ))
     }
 </div>
+
+<style>
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+</style>

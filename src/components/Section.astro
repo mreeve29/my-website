@@ -2,14 +2,14 @@
 import Title from "./Title.astro";
 
 export interface Props {
-    classProp: string;
+    classProp?: string;
     title: string;
 }
 
 const { classProp, title } = Astro.props;
 ---
 
-<div class={`max-w-4xl m-auto ${classProp} px-3 md:px-5`}>
+<div class={`max-w-4xl m-auto pt-1 sm:pt-10 ${classProp? classProp : "" } px-3 md:px-5`}>
     <Title text={title} />
 
     <div class="p-2 text-base md:text-lg lg:text-xl">

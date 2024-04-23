@@ -2,8 +2,22 @@
     "name": "Michael Reeve",
     "description": "Michael Reeve - senior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about": "I am a senior Computer Science student at the University of Maryland and a former software engineer intern at Teradyne. My skills include CI/CD workflows and language development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
+    "about": "I am a senior at the University of Maryland studying Computer Science and an incoming software engineer at Teradyne. My skills include CI/CD workflows and language development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
     "experience": [
+        {
+            "company": "Teradyne",
+            "shortCompany": "Teradyne",
+            "link": "https://teradyne.com",
+            "title": "Software Engineer",
+            "startDate": "July 2024",
+            "endDate": "July 2024",
+            "location": "North Reading, MA",
+            "icon": "/teradyne.jpg",
+            "description": [
+                "Incoming Software Engineer at Teradyne working on the Semiconductor Test Team"
+            ],
+            "keywords": []
+        },
         {
             "company": "Teradyne",
             "shortCompany": "Teradyne",
@@ -17,6 +31,12 @@
                 "Designed a language support extension for VS Code for a custom internal language.",
                 "Implemented a debugger, and LSP features such as syntax highlighting, autocomplete (Intellisense), function signature support, document outlines, etc.",
                 "Leveraged concepts of parsers, grammar, ASTs, and complied with Microsoft's LSP/DAP protocols."
+            ],
+            "keywords": [
+                "C#",
+                "VSCode",
+                "LSP",
+                "Debugger"
             ]
         },
         {
@@ -33,6 +53,12 @@
                 "Improved our team's build times by 250% by implementing an automatic workflow that only recompiled necessary files",
                 "Leveraged the use of webhooks, allowing the pipeline to automatically start a build when a team member made a commit to the codebase",
                 "Developed using Jenkins and Docker images as agents, with support for Gitea"
+            ],
+            "keywords": [
+                "CI/CD",
+                "Jenkins",
+                "Java",
+                "Docker"
             ]
         }
     ],
@@ -137,7 +163,14 @@
                 "MongoDB",
                 "Full Stack"
             ],
-            "link": "https://github.com/mreeve29/cmsc388j_final"
+            "link": "https://github.com/mreeve29/cmsc388j_final",
+            "images": [
+                "/rest1.png",
+                "/rest2.png",
+                "/rest3.png",
+                "/rest4.png",
+                "/rest5.png"
+            ]
         },
         {
             "title": "Twitter (X) Data Analysis and Sentiment",

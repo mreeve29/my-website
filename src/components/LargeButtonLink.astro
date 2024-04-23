@@ -1,0 +1,13 @@
+---
+const { classProp, link } = Astro.props;
+---
+
+<div class="mt-1 sm:mt-10">
+    <a href={link}>
+        <div
+            class="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 m-auto sm:m-0 rounded text-white font-bold text-xl sm:text-2xl text-center align-middle py-2 sm:py-3 cursor-pointer"
+        >
+            <slot />
+        </div>
+    </a>
+</div>
