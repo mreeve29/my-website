@@ -2,7 +2,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
 type Props = {
-    images: string[];
+    images?: string[];
 }
 
 const SlideShow = ({ images }: Props) => {
@@ -21,12 +21,16 @@ const SlideShow = ({ images }: Props) => {
         </div>)
     });
 
+    const indicators = () => (
+        <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" className="indicator" fill='#e6e3e3' >
+            <circle r="9" cx="10" cy="10" />
+        </svg>
+    );
+
     return (
         (images ?
-            <Slide autoplay={false} transitionDuration={250} easing='ease' cssClass='rounded mb-2'>
-
+            <Slide autoplay={false} transitionDuration={250} easing='ease' cssClass='rounded' indicators={indicators}>
                 {imgDivs}
-
             </Slide>
             : <></>)
     );

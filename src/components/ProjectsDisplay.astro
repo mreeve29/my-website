@@ -66,12 +66,16 @@ if (select){
     }
 </div>
 
-<style>
-.each-slide-effect > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 350px;
+<style is:global>
+.indicator.active{
+    fill: #535353;
+}
+.indicator{
+    margin: 0px 2px;
+    cursor: pointer;
+}
+.indicators{
+    transition: all 0.25s ease;
+    margin-top: 10px !important;
 }
 </style>

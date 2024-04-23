@@ -132,7 +132,13 @@
                 "GitHub Actions",
                 "Netlify"
             ],
-            "link": "https://github.com/mreeve29/my-website"
+            "link": "https://github.com/mreeve29/my-website",
+            "images": [
+                "/website1.jpg",
+                "/website4.jpg",
+                "/website2.jpg",
+                "/website3.jpg"
+            ]
         },
         {
             "title": "Slack Tasks Bot",
@@ -147,7 +153,11 @@
                 "NodeJS",
                 "SQLite"
             ],
-            "link": "https://github.com/mreeve29/slack-tasks-bot"
+            "link": "https://github.com/mreeve29/slack-tasks-bot",
+            "images": [
+                "/slack1.jpg",
+                "/slack2.jpg"
+            ]
         },
         {
             "title": "Restaurant Review Website",
@@ -187,7 +197,12 @@
                 "API"
             ],
             "link": "https://github.com/mreeve29/mreeve29.github.io",
-            "live_site": "https://mreeve29.github.io/"
+            "live_site": "https://mreeve29.github.io/",
+            "images": [
+                "/twitter2.jpg",
+                "/twitter1.jpg",
+                "/twitter3.jpg"
+            ]
         }
     ]
 }
