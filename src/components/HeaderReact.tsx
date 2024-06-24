@@ -96,22 +96,25 @@ const HeaderReact = ({ activePath }: Props) => {
         <div className="flex justify-between items-center">
             <a className="text-2xl font-['Roboto']" href="/">Michael Reeve</a>
 
-            <button onClick={() => setOpen(!open)}>
-                <svg className="dark:fill-white fill-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
+            <button onClick={() => setOpen(!open)} className="h-[21px]">
+                {/* menu button animation from https://www.w3schools.com/howto/howto_css_menu_icon.asp */}
+                <div className="inline-block">
+                    <div className={"w-7 h-[3px] bg-white transition-all duration-[0.4s] rounded " + (open ? "transform -rotate-45 translate-y-[9px]" : "")}></div>
+                    <div className={"w-7 h-[3px] bg-white my-[6px] transition-all duration-[0.4s] rounded " + (open ? "opacity-0" : "")}></div>
+                    <div className={"w-7 h-[3px] bg-white transition-all duration-[0.4s] rounded " + (open ? "transform rotate-45 translate-y-[-9px]" : "")}></div>
+                </div>
             </button>
         </div>
-        <div style={{ visibility: (open && !isDesktopOrLaptop) ? "visible" : "hidden" }}>
 
-            <div className="text-lg [&>a]:my-2 [&>a]:inline-block">
-                <a href="/" className={(activePath == "home" ? "text-sky-500" : "")}>Home</a> <br />
-                <a href="/experience.html" className={(activePath == "experience" ? "text-sky-500" : "")}>Experience</a> <br />
-                <a href="/projects.html" className={(activePath == "projects" ? "text-sky-500" : "")}>Projects</a> <br />
-                <a href="/contact.html" className={(activePath == "contact" ? "text-sky-500" : "")}>Contact</a> <br />
-            </div>
 
-        </div>
+        {(open && !isDesktopOrLaptop) ? <div className="text-lg [&>a]:my-2 [&>a]:inline-block">
+            <a href="/" className={(activePath == "home" ? "text-sky-500" : "")}>Home</a> <br />
+            <a href="/experience.html" className={(activePath == "experience" ? "text-sky-500" : "")}>Experience</a> <br />
+            <a href="/projects.html" className={(activePath == "projects" ? "text-sky-500" : "")}>Projects</a> <br />
+            <a href="/contact.html" className={(activePath == "contact" ? "text-sky-500" : "")}>Contact</a> <br />
+        </div> : <></>}
+
+
     </>;
 
     return (
