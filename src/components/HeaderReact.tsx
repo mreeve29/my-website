@@ -24,6 +24,7 @@ const HeaderReact = ({ activePath }: Props) => {
                     <a className={"hover:text-sky-500 " + (activePath == "home" ? "text-sky-500" : "")} href="/">Home</a>
                     <a className={"hover:text-sky-500 " + (activePath == "experience" ? "text-sky-500" : "")} href="/experience.html">Experience</a>
                     <a className={"hover:text-sky-500 " + (activePath == "projects" ? "text-sky-500" : "")} href="/projects.html">Projects</a>
+                    <a className={"hover:text-sky-500 " + (activePath == "blog" ? "text-sky-500" : "")} href="/blog.html">Blog</a>
                     <a className={"hover:text-sky-500 " + (activePath == "contact" ? "text-sky-500" : "")} href="/contact.html">Contact</a>
                 </div>
             </div>
@@ -111,6 +112,7 @@ const HeaderReact = ({ activePath }: Props) => {
             <a href="/" className={(activePath == "home" ? "text-sky-500" : "")}>Home</a> <br />
             <a href="/experience.html" className={(activePath == "experience" ? "text-sky-500" : "")}>Experience</a> <br />
             <a href="/projects.html" className={(activePath == "projects" ? "text-sky-500" : "")}>Projects</a> <br />
+            <a href="/blog.html" className={(activePath == "blog" ? "text-sky-500" : "")}>Blog</a> <br />
             <a href="/contact.html" className={(activePath == "contact" ? "text-sky-500" : "")}>Contact</a> <br />
         </div> : <></>}
 

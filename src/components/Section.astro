@@ -9,7 +9,7 @@ export interface Props {
 const { classProp, title } = Astro.props;
 ---
 
-<div class={`max-w-4xl m-auto pt-1 sm:pt-10 ${classProp? classProp : "" } px-2 md:px-5`}>
+<div class={`max-w-4xl mx-auto pt-1 sm:pt-10 ${classProp? classProp : "" } px-2 md:px-5`}>
     <Title text={title} />
 
     <div class="md:p-2 text-base md:text-lg lg:text-xl">

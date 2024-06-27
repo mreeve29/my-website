@@ -1,12 +1,14 @@
 ---
 import { SEO } from 'astro-seo';
 import { ViewTransitions } from 'astro:transitions';
+import HeaderReact from '../components/HeaderReact';
 
 export interface Props {
     title: string;
+    activePath: string;
 }
 
-const { title } = Astro.props;
+const { title, activePath } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -41,9 +43,11 @@ const { title } = Astro.props;
         />
         <ViewTransitions />
     </head>
+    
     <body
         class="text-black dark:text-white bg-gradient-to-tl from-slate-100 to-zinc-100 dark:from-stone-900 dark:to-slate-900 transition-all min-h-screen flex flex-col"
     >
+        <header><HeaderReact activePath={activePath} client:load/></header>
         <slot />
     </body>
 </html>

@@ -9,8 +9,7 @@ import HeaderReact from "../components/HeaderReact";
 const { projects } = Data;
 ---
 
-<Layout title="Michael Reeve - Projects">
-    <HeaderReact activePath={"projects"} client:load/>
+<Layout title="Michael Reeve - Projects" activePath="projects">
     <main class="w-full sm:max-w-screen-2xl m-auto mt-0">
         <Section title="Projects">
             <ProjectsDisplay projects={projects} />
