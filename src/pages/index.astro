@@ -18,38 +18,35 @@ const { about, education, experience, skills, projects } = Data;
 ---
 
 <Layout title="Michael Reeve - Software Engineer" activePath="home">
-    <main class="w-full sm:max-w-screen-2xl m-auto mt-0">
-        <Name name="Michael Reeve" />
-        <Section title="About Me">
-            <About about={about} />
-            <LargeButtonLink classProp="mt-10" link="contact.html">
-                Contact Me!
-            </LargeButtonLink>
-        </Section>
+    <Name name="Michael Reeve" />
+    <Section title="About Me">
+        <About about={about} />
+        <LargeButtonLink classProp="mt-10" link="contact.html">
+            Contact Me!
+        </LargeButtonLink>
+    </Section>
 
-        <Section title="Recent Experience">
-            <Experiences experiences={experience} select={[0]}/>
-            <LargeButtonLink classProp="mt-10" link="experience.html">
-                View All Experiences
-            </LargeButtonLink>
-        </Section>
+    <Section title="Recent Experience">
+        <Experiences experiences={experience} select={[0]}/>
+        <LargeButtonLink classProp="mt-10" link="experience.html">
+            View All Experiences
+        </LargeButtonLink>
+    </Section>
 
-        <Section title="Featured Projects">
-            <ProjectsDisplay projects={projects} select={[1,3]} />
-            <LargeButtonLink classProp="mt-10" link="projects.html">
-                View All Projects
-            </LargeButtonLink>
-        </Section>
+    <Section title="Featured Projects">
+        <ProjectsDisplay projects={projects} select={[1,3]} />
+        <LargeButtonLink classProp="mt-10" link="projects.html">
+            View All Projects
+        </LargeButtonLink>
+    </Section>
 
-        <Section title="Education" classProp="pt-5">
-            <Education schools={education} />
-        </Section>
+    <Section title="Education" classProp="pt-5">
+        <Education schools={education} />
+    </Section>
 
-        <Section title="Skills" classProp="sm:pb-24">
-            <Skills skills={skills} />
-        </Section>
-    </main>
-    <Footer />
+    <Section title="Skills" classProp="sm:pb-24">
+        <Skills skills={skills} />
+    </Section>
 </Layout>
 
 <style>

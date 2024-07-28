@@ -11,7 +11,7 @@ const { skills } = Astro.props;
     {
         skills.map((s: Skill) => (
             <>
-                <div class="text-xl">{s.category}</div>
+                <div class="text-xl font-bold">{s.category}</div>
                 <div class="grid grid-cols-2 sm:grid-cols-3">
                     {s.skillList.map((str: String) => (
                         <div class="bg-white dark:bg-[#161b22] rounded p-1 m-1 border dark:border-[#21262d]">

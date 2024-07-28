@@ -1,22 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-// import FormattedDate from "../../components/FormattedDate.astro";
-// import PostCard from "../../components/PostCard.astro";
-// import Card from "../../components/Card.astro";
 import Section from "../../components/Section.astro";
-import PostCard from "../../components/PostCard.astro";
+import BlogPostDisplayer from "../../components/BlogPostDisplayer";
 
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const allFilters = Array.from(new Set(posts.map((post) => post.data.tags).flat())).sort();
 ---
 <Layout title="Blog - Michael Reeve" activePath="blog">
     <Section title="Blog">
-        {
-            posts.map((post) => (
-                <PostCard href={`/projects/${post.slug}/`} title={post.data.title} description={post.data.description} date={post.data.pubDate} image={post.data.cover.src}></PostCard>
-                ))
-        }
+        <BlogPostDisplayer defaultPosts={posts} allFilters={allFilters} client:load></BlogPostDisplayer>
     </Section>
 </Layout>

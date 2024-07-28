@@ -2,7 +2,7 @@
     "name": "Michael Reeve",
     "description": "Michael Reeve - senior at The University of Maryland studying Computer Science",
     "email": "michael.s.reeve@gmail.com",
-    "about": "I am a senior at the University of Maryland studying Computer Science and an incoming software engineer at Teradyne. My skills include CI/CD workflows and language development. I am constantly seeking opportunities to expand my knowledge and grow my skill set in the field.",
+    "about": "I am a software engineer at Teradyne and a former computer science student at The University of Maryland. My skills include backend and language development. I am constantly looking to expand my knowledge and grow my skill set in the field.",
     "experience": [
         {
             "company": "Teradyne",
@@ -10,13 +10,13 @@
             "link": "https://teradyne.com",
             "title": "Software Engineer",
             "startDate": "July 2024",
-            "endDate": "July 2024",
+            "endDate": "Present",
             "location": "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
-                "Incoming Software Engineer at Teradyne working on the Semiconductor Test Team"
+                "Software Engineer at Teradyne working on the Semiconductor Test Team"
             ],
-            "keywords": []
+            "keywords": ["C#", ".NET", "Backend", "Frontend"]
         },
         {
             "company": "Teradyne",
@@ -32,12 +32,7 @@
                 "Implemented a debugger, and LSP features such as syntax highlighting, autocomplete (Intellisense), function signature support, document outlines, etc.",
                 "Leveraged concepts of parsers, grammar, ASTs, and complied with Microsoft's LSP/DAP protocols."
             ],
-            "keywords": [
-                "C#",
-                "VSCode",
-                "LSP",
-                "Debugger"
-            ]
+            "keywords": ["C#", "VSCode", "LSP", "Debugger"]
         },
         {
             "company": "Teradyne",
@@ -54,12 +49,7 @@
                 "Leveraged the use of webhooks, allowing the pipeline to automatically start a build when a team member made a commit to the codebase",
                 "Developed using Jenkins and Docker images as agents, with support for Gitea"
             ],
-            "keywords": [
-                "CI/CD",
-                "Jenkins",
-                "Java",
-                "Docker"
-            ]
+            "keywords": ["CI/CD", "Jenkins", "Java", "Docker"]
         }
     ],
     "education": [
@@ -99,21 +89,11 @@
         },
         {
             "category": "Frameworks",
-            "skillList": [
-                "NodeJS",
-                "Flask",
-                "Unity",
-                "Astro"
-            ]
+            "skillList": ["NodeJS", ".NET", "Flask", "Unity", "Astro"]
         },
         {
             "category": "Tools",
-            "skillList": [
-                "Git",
-                "Docker",
-                "Jenkins",
-                "Agile Development"
-            ]
+            "skillList": ["Git", "Docker", "Jenkins", "Agile Development"]
         }
     ],
     "projects": [
@@ -148,16 +128,9 @@
                 "Supports assigning members to tasks, and sending messages to members asking to take on tasks.",
                 "Uses SQLite as a backend database."
             ],
-            "keywords": [
-                "JavaScript",
-                "NodeJS",
-                "SQLite"
-            ],
+            "keywords": ["JavaScript", "NodeJS", "SQLite"],
             "link": "https://github.com/mreeve29/slack-tasks-bot",
-            "images": [
-                "/slack1.jpg",
-                "/slack2.jpg"
-            ]
+            "images": ["/slack1.jpg", "/slack2.jpg"]
         },
         {
             "title": "Restaurant Review Website",
@@ -167,12 +140,7 @@
                 "Implements secure user management with CSRF safe forms and hashed passwords.",
                 "Uses MongoDB as a backend database."
             ],
-            "keywords": [
-                "Python",
-                "Flask",
-                "MongoDB",
-                "Full Stack"
-            ],
+            "keywords": ["Python", "Flask", "MongoDB", "Full Stack"],
             "link": "https://github.com/mreeve29/cmsc388j_final",
             "images": [
                 "/rest1.jpg",
@@ -190,19 +158,10 @@
                 "Gathered data from Kaggle and using Twitter (X)'s API.",
                 "Used Python and Pandas to compile CSV files and compute statistical equations."
             ],
-            "keywords": [
-                "Python",
-                "Pandas",
-                "Machine Learning",
-                "API"
-            ],
+            "keywords": ["Python", "Pandas", "Machine Learning", "API"],
             "link": "https://github.com/mreeve29/mreeve29.github.io",
             "live_site": "https://mreeve29.github.io/",
-            "images": [
-                "/twitter2.jpg",
-                "/twitter1.jpg",
-                "/twitter3.jpg"
-            ]
+            "images": ["/twitter2.jpg", "/twitter1.jpg", "/twitter3.jpg"]
         }
     ]
 }
