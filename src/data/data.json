@@ -14,7 +14,7 @@
             "location": "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
-                "Developing the next generation of Silicon Photonic devices"
+                "Developing software for the next generation of Silicon Photonic devices"
             ],
             "keywords": ["C#", ".NET", "Backend", "Hardware Drivers"]
         },
