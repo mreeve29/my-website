@@ -14,9 +14,9 @@
             "location": "North Reading, MA",
             "icon": "/teradyne.jpg",
             "description": [
-                "Software Engineer at Teradyne working on the Semiconductor Test Team"
+                "Developing the next generation of Silicon Photonic devices"
             ],
-            "keywords": ["C#", ".NET", "Backend", "Frontend"]
+            "keywords": ["C#", ".NET", "Backend", "Hardware Drivers"]
         },
         {
             "company": "Teradyne",
@@ -80,16 +80,17 @@
         {
             "category": "Languages",
             "skillList": [
-                "Java",
                 "C#",
-                "C",
+                "TypeScript & JavaScript",
                 "Python",
-                "TypeScript & JavaScript"
+                "C",
+                "Java",
+                "SQL"
             ]
         },
         {
             "category": "Frameworks",
-            "skillList": ["NodeJS", ".NET", "Flask", "Unity", "Astro"]
+            "skillList": [".NET", "Node JS", "Flask", "Pandas"]
         },
         {
             "category": "Tools",
@@ -97,6 +98,36 @@
         }
     ],
     "projects": [
+        {
+            "title": "Restaurant Review Website",
+            "year": 2023,
+            "description": [
+                "A full stack application to view and review restaurants in College Park, MD, written in Python using Flask.",
+                "Implements secure user management with CSRF safe forms and hashed passwords.",
+                "Uses MongoDB as a backend database."
+            ],
+            "keywords": ["Python", "Flask", "MongoDB", "Full Stack"],
+            "link": "https://github.com/mreeve29/cmsc388j_final",
+            "images": [
+                "/rest1.jpg",
+                "/rest2.jpg",
+                "/rest3.jpg",
+                "/rest4.jpg",
+                "/rest5.jpg"
+            ]
+        },
+        {
+            "title": "Slack Tasks Bot",
+            "year": 2023,
+            "description": [
+                "A Slack bot written in JavaScript to manage tasks in a Slack workplace, leveraging the Slack Bolt API.",
+                "Supports assigning members to tasks, and sending messages to members asking to take on tasks.",
+                "Uses SQLite as a backend database."
+            ],
+            "keywords": ["JavaScript", "NodeJS", "SQLite"],
+            "link": "https://github.com/mreeve29/slack-tasks-bot",
+            "images": ["/slack1.jpg", "/slack2.jpg"]
+        },
         {
             "title": "Personal Website",
             "year": 2023,
@@ -120,36 +151,7 @@
                 "/website3.jpg"
             ]
         },
-        {
-            "title": "Slack Tasks Bot",
-            "year": 2023,
-            "description": [
-                "A Slack bot written in JavaScript to manage tasks in a Slack workplace, leveraging the Slack Bolt API.",
-                "Supports assigning members to tasks, and sending messages to members asking to take on tasks.",
-                "Uses SQLite as a backend database."
-            ],
-            "keywords": ["JavaScript", "NodeJS", "SQLite"],
-            "link": "https://github.com/mreeve29/slack-tasks-bot",
-            "images": ["/slack1.jpg", "/slack2.jpg"]
-        },
-        {
-            "title": "Restaurant Review Website",
-            "year": 2023,
-            "description": [
-                "A full stack application to view and review restaurants in College Park, MD, written in Python using Flask.",
-                "Implements secure user management with CSRF safe forms and hashed passwords.",
-                "Uses MongoDB as a backend database."
-            ],
-            "keywords": ["Python", "Flask", "MongoDB", "Full Stack"],
-            "link": "https://github.com/mreeve29/cmsc388j_final",
-            "images": [
-                "/rest1.jpg",
-                "/rest2.jpg",
-                "/rest3.jpg",
-                "/rest4.jpg",
-                "/rest5.jpg"
-            ]
-        },
+
         {
             "title": "Twitter (X) Data Analysis and Sentiment",
             "year": 2022,
