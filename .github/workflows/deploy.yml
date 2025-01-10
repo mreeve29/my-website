@@ -22,9 +22,6 @@ jobs:
                   node-version: 20.15.x
                   cache: npm
 
-            - name: Install Netlify
-              run: npm install netlify-cli@17.10.1 -g
-
             - name: Install
               run: npm ci
 
