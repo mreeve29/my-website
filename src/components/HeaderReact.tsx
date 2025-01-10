@@ -129,7 +129,7 @@ const HeaderReact = ({ activePath }: Props) => {
                     <div className="inline-block">
                         <div
                             className={
-                                "w-7 h-[3px] bg-white transition-all duration-[0.4s] rounded " +
+                                "w-7 h-[3px] bg-black dark:bg-white transition-all duration-[0.4s] rounded " +
                                 (open
                                     ? "transform -rotate-45 translate-y-[9px]"
                                     : "")
@@ -137,13 +137,13 @@ const HeaderReact = ({ activePath }: Props) => {
                         ></div>
                         <div
                             className={
-                                "w-7 h-[3px] bg-white my-[6px] transition-all duration-[0.4s] rounded " +
+                                "w-7 h-[3px] bg-black dark:bg-white  my-[6px] transition-all duration-[0.4s] rounded " +
                                 (open ? "opacity-0" : "")
                             }
                         ></div>
                         <div
                             className={
-                                "w-7 h-[3px] bg-white transition-all duration-[0.4s] rounded " +
+                                "w-7 h-[3px] bg-black dark:bg-white  transition-all duration-[0.4s] rounded " +
                                 (open
                                     ? "transform rotate-45 translate-y-[-9px]"
                                     : "")
@@ -208,7 +208,9 @@ const HeaderReact = ({ activePath }: Props) => {
                 <div
                     className={
                         "px-3 sm:px-5 pb-1 pt-2 md:mb-6 items-center sm:max-w-screen-xl mx-auto " +
-                        (open && !isDesktopOrLaptop ? "bg-[#121725]" : "")
+                        (open && !isDesktopOrLaptop
+                            ? "dark:bg-[#121725] bg-zinc-100"
+                            : "")
                     }
                     style={{ transition: "all .1s ease-in-out" }}
                 >
